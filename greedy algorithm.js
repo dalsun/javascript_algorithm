@@ -1,4 +1,4 @@
-// 백준 11047번 - 동전 문제
+// 백준 11047번 - 동전 0
 
 let fs = require('fs');
 let input = fs.readFileSync('./input.txt').toString().split('\n');
@@ -21,3 +21,26 @@ for (let i=a-1; i>=0; i--) {
   }
 }
 console.log(cnt);
+
+// 백준 11399번 - ATM
+
+let fs = require('fs');
+let input = fs.readFileSync('./input.txt').toString().split('\n');
+
+let n = Number(input[0]);
+let arr = input[1].split(" ").map(Number);
+
+function compare(a, b) {
+  return a-b;
+}
+
+arr.sort(compare);
+
+let answer = 0;
+let summary = 0;
+for (let i = 0; i<n; i++) {
+  summary += arr[i];
+  answer += summary;
+}
+
+console.log(answer);
