@@ -16,8 +16,6 @@ for (let i = 1; i <= T; i++) {
     );
 }
 
-console.log(value);
-
 for (let i = 0; i < value.length; i++) {
     let length = value[i].length;
     let count = 1;
@@ -32,3 +30,5 @@ for (let i = 0; i < value.length; i++) {
 }
 
 console.log(result.join("\n"));
+
+// 출처 : https://velog.io/@jooyong-boo/javascript-백준-1946번-신입-사원
